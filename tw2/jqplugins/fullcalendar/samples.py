@@ -58,10 +58,10 @@ class BasicCalendarWidget(FullCalendarWidget):
     '''
     attrs = {'style': 'width: 100%;'}
     options={'header': {
-			    'left': 'prev,next today',
-			    'center': 'title',
-		        'right': 'month,agendaWeek,agendaDay'
-		        },
+                'left': 'prev,next today',
+                'center': 'title',
+                'right': 'month,agendaWeek,agendaDay'
+                },
              'events': calendar_events,
              'editable': True,
              'aspectRatio': 1.60,
