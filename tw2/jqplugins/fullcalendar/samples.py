@@ -15,10 +15,12 @@ now = datetime.now()
 calendar_events = [
             {'title': 'event #1 is now!',
              'start': "2012-07-17T21:08:21.634121",
+             'allDay': False,
             },
             {'title': 'drag me!',
              'start': "2012-07-17T20:08:21.634121",
              'end': "2012-07-17T21:08:21.634121",
+             'allDay': False,
             },
             {'title': 'python date',
              'start': now.date(),
@@ -41,7 +43,13 @@ class BasicCalendarWidget(FullCalendarWidget):
     see source code for js functions and `calendar_events`
     '''
     attrs = {'style': 'width: 100%;'}
-    options={'events': calendar_events,
+    options={'header': {
+				        'left': 'prev,next today',
+				        'center': 'title',
+				        'right': 'month,agendaWeek,agendaDay'
+			            },
+    
+            'events': calendar_events,
              'editable': True,
              'aspectRatio': 1.60,
              'theme': True,
