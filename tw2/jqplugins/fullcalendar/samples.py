@@ -8,22 +8,36 @@
 import tw2.core as twc
 
 from widgets import *
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 now = datetime.now()
 
 calendar_events = [
-            {'title': 'event #1 is now!',
-             'start': "2012-07-17T21:08:21.634121",
+            {'title': 'the day before yesterday',
+             'start': now - timedelta(days=2),
              'allDay': False,
             },
-            {'title': 'drag me!',
-             'start': "2012-07-17T20:08:21.634121",
-             'end': "2012-07-17T21:08:21.634121",
+            {'title': 'the day after tomorrow',
+             'start': now + timedelta(days=2),
              'allDay': False,
             },
-            {'title': 'python date',
+            {'title': 'stretch or drag me!',
+             'start': now - timedelta(days=7),
+             'allDay': False,
+            },
+            {'title': "static: using iso formatted strings " \
+                      "-- will be lost in the past!",
+             'start': "2012-07-02T20:08:21.634121",
+             'end': "2012-07-02T21:08:21.634121",
+             'allDay': False,
+            },
+            {'title': 'long event',
+             'start': now + timedelta(days=7),
+             'end': now + timedelta(days=10),
+            },
+            {'title': 'all day event',
              'start': now.date(),
+             'allDay': True,
             },
         ]
 
@@ -44,12 +58,11 @@ class BasicCalendarWidget(FullCalendarWidget):
     '''
     attrs = {'style': 'width: 100%;'}
     options={'header': {
-				        'left': 'prev,next today',
-				        'center': 'title',
-				        'right': 'month,agendaWeek,agendaDay'
-			            },
-    
-            'events': calendar_events,
+			    'left': 'prev,next today',
+			    'center': 'title',
+		        'right': 'month,agendaWeek,agendaDay'
+		        },
+             'events': calendar_events,
              'editable': True,
              'aspectRatio': 1.60,
              'theme': True,
