@@ -64,12 +64,13 @@ class FullCalendarWidget(tw2_jq_ui.JQueryUIWidget):
         as python `date` or `datetime` objects] using .isoformat() to enable
         encoding
         '''
-
-        for evt in self.options['events']:
-            if 'start' in evt and isinstance(evt['start'], (date, datetime)):
-                evt['start']=evt['start'].isoformat()
-            if 'end' in evt and isinstance(evt['end'], (date, datetime)):
-                evt['end']=evt['end'].isoformat()
+        
+        if 'events' in self.options:
+            for evt in self.options['events']:
+                if 'start' in evt and isinstance(evt['start'], (date, datetime)):
+                    evt['start'] = evt['start'].isoformat()
+                if 'end' in evt and isinstance(evt['end'], (date, datetime)):
+                    evt['end'] = evt['end'].isoformat()
 
         super(FullCalendarWidget, self).prepare()
 

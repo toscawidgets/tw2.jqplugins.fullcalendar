@@ -3,6 +3,5 @@
 
 <div ${tw.attrs(attrs=w.attrs)}> </div>
 
-
 <%include file="generic_jq_ui_js.mak" />
 </div>
