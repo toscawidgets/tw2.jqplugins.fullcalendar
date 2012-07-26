@@ -21,7 +21,7 @@ setup(
     author='Robert Sudwarts',
     author_email='robert.sudwarts@gmail.com',
     license='MIT',
-    url='',
+    url='https://github.com/RobertSudwarts/tw2.jqplugins.fullcalendar',
     install_requires=[
              "tw2.core>=2.0b2",
              "tw2.jqplugins.ui",
