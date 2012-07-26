@@ -3,7 +3,7 @@ import multiprocessing, logging
 
 major=0
 minor=1
-micro=0
+micro=1
 
 f = open('README.rst')
 long_description = f.read().strip()
