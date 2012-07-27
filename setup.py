@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 import multiprocessing, logging
 
-major=0
-minor=1
+major=2
+minor=0
 micro=1
 
 f = open('README.rst')
@@ -24,6 +24,7 @@ setup(
     url='https://github.com/RobertSudwarts/tw2.jqplugins.fullcalendar',
     install_requires=[
              "tw2.core>=2.0b2",
+             "tw2.jquery",
              "tw2.jqplugins.ui",
     ],
     extras_require = {

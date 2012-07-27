@@ -9,12 +9,10 @@ tw2.jqplugins.fullcalendar
 
 A toscawidgets2 wrapper for the FullCalendar jquery plugin library.
 
-See the FullCalendar library's documentation for fuller information:
+See the FullCalendar library's documentation for further information:
 `jQuery FullCalendar Documentation`_ 
 
 For demos of other tw2.jqplugin widgets see: http://tw2-demos.threebean.org/
-
-** pending upload to the the tw2 demo pages **
 
 Description
 -------------
@@ -46,7 +44,7 @@ them, check out
 To give it a try you'll need git, python, and `virtualenvwrapper
 <http://pypi.python.org/pypi/virtualenvwrapper>`_.  Run::
 
-    $ git clone git://github.com/toscawidgets/tw2.jqplugins.fullcalendar.git
+    $ git clone git@github.com:toscawidgets/tw2.jqplugins.fullcalendar.git
     $ cd tw2.jqplugins.fullcalendar
     $ mkvirtualenv tw2.jqplugins.fullcalendar
     (tw2.jqplugins.fullcalendar) $ pip install tw2.devtools
